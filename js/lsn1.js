@@ -20,12 +20,18 @@ writeWords('That`s it.')
 //     return {name: this.firstName + ' ' + this.lastName};
 // }
 
-  class NameMe {
-    constructor(first, last) {
-      this.firstName = first;
-      this.lastName = last;
-      return { name: this.firstName + ' ' + this.lastName };
-    }
+  // class NameMe {
+  //   constructor(first, last) {
+  //     this.firstName = first;
+  //     this.lastName = last;
+  //     this.name = this.firstName + ' ' + this.lastName ;
+  //   }
+  // }
+
+  function NameMe(first, last) {
+    this.firstName = first;
+    this.lastName = last;
+    this.name = this.firstName + ' ' + this.lastName;
   }
 
   var n = new NameMe('John', 'Doe');
@@ -33,5 +39,5 @@ writeWords('That`s it.')
   n.lastName //Expected: Doe
   n.name //Expected: John Doe
 
-  console.log(n.name)
+  console.log(n.name, ',', n.firstName, ',', n.lastName)
   }
