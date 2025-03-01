@@ -1,3 +1,17 @@
+// 6 значень приводяться до `false`: `0`, `NaN`, `null`, `undefined`,
+//  пустий рядок `""` або `''` та саме значення `false`. Всі решта - до `true`.
+
+{
+  console.log(1 && 5); // true && true -> 5 
+  console.log(5 && 1); // true && true -> 1
+  console.log(0 && 2); // false && true -> 0 
+  console.log(2 && 0); // true && false -> 0 
+  console.log("" && "Mango"); // false && true -> ''
+  console.log("Mango" && ""); // true && false -> ''
+  console.log("Mango" && "Poly"); // true && true -> 'Poly' 
+  console.log("Poly" && "Mango"); // true && true -> 'Mango'
+}
+
 {// function checkForSpam(message) {
 //    return message.toLowerCase().includes('spam') || message.toLowerCase().includes('spam')
 // }
@@ -137,4 +151,38 @@ writeWords('That`s it.')
     
       return message;
     }
+
+//   function isNumberInRange(start, end, number) {
+//   let isInRange = false;
+//   if(start<=number && end>=number) {
+//     isInRange=true
+//   }
+
+//   return isInRange;
+// }
+
+//   function isNumberInRange(start, end, number) {
+//   if(start<=number && end>=number) {
+//     return true
+//   }
+
+//   return false;
+// }
+//   function isNumberInRange(start, end, number) {
+//     return start<=number && end>=number ? true: false;
+// }
+
+// function isNumberInRange(start, end, number) {
+//   const isInRange = start<=number && end>=number ; 
+
+//   return isInRange;
+// }
+
+//   function isNumberInRange(start, end, number) {
+//     return start<=number && end>=number ;
+// }
+
+  const isNumberInRange=(start, end, number)=>  start<=number && end>=number ;
+
+console.log(isNumberInRange(10, 30, 17))
   }
