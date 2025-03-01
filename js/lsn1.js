@@ -184,5 +184,51 @@ writeWords('That`s it.')
 
   const isNumberInRange=(start, end, number)=>  start<=number && end>=number ;
 
-console.log(isNumberInRange(10, 30, 17))
+// console.log(isNumberInRange(10, 30, 17))
+
+function checkIfCanAccessContent(subType) {
+  const canAccessContent = subType==='pro' || subType==='vip' ; 
+ return canAccessContent
   }
+
+  // console.log(checkIfCanAccessContent('pro'))
+
+
+  function isNumberNotInRange(start, end, number) {
+    const isInRange = number >= start && number <= end;
+    const isNotInRange = !isInRange; 
+  
+    return isNotInRange;
+  }
+
+  function getDiscount(totalSpent) {
+    const BASE_DISCOUNT = 0;
+    const BRONZE_DISCOUNT = 0.02;
+    const SILVER_DISCOUNT = 0.05;
+    const GOLD_DISCOUNT = 0.1;
+    let discount=BASE_DISCOUNT;
+
+    if(totalSpent>=50000){
+      discount=GOLD_DISCOUNT
+    }else if(totalSpent>=20000){
+      discount=SILVER_DISCOUNT
+    }else if(totalSpent>=5000){
+      discount=BRONZE_DISCOUNT
+    }
+    return discount;
+  }
+
+  function checkStorage(available, ordered) {
+    let message = ordered > available ? "Not enough goods in stock!"
+          :"The order is accepted, our manager will contact you";
+  
+    return message;
+  }
+
+  function checkPassword(password) {
+    const ADMIN_PASSWORD = "jqueryismyjam";
+    let message;
+    message=password===ADMIN_PASSWORD ? "Access is allowed" : "Access denied, wrong password!"
+    return message;
+  }
+}
