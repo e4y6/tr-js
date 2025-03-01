@@ -56,4 +56,21 @@ writeWords('That`s it.')
     }
 
     // console.log(makeOrderMessage(2,3,4))
+
+    function isAdult(age) {
+      const passed = age>=18;
+    
+      return passed;
+    }
+    // console.log(isAdult(11))
+
+    function isValidPassword(password) {
+      const SAVED_PASSWORD = 'Thejqueryismyjamy';
+      const isMatch = SAVED_PASSWORD===password;
+    
+      return isMatch;
+    }
+    // console.log(isValidPassword('ooo'))
+
+    
   }
