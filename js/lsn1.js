@@ -121,8 +121,9 @@ writeWords('That`s it.')
       }
     
       return message;
-    }
+    }}
 
+{
     function checkStorage(available, ordered) {
       let message;
       if(!ordered){
