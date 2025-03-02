@@ -107,3 +107,13 @@ the "name" property is accessible, but the "firstName" and "lastName" is
     return arr;
   };
 }
+{
+  function calculate(string) {
+    const numbers = string.replace(/[a-z]/gi, "").trim().split(" ");
+    return string.includes("loses")
+      ? +numbers[0] - +numbers[numbers.length - 1]
+      : +numbers[0] + +numbers[numbers.length - 1];
+  }
+
+  console.log(calculate("Panda has 48 apples and loses 4"));
+}
