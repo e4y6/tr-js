@@ -231,4 +231,71 @@ function checkIfCanAccessContent(subType) {
     message=password===ADMIN_PASSWORD ? "Access is allowed" : "Access denied, wrong password!"
     return message;
   }
+
+  function getSubscriptionPrice(type) {
+    let price;
+  
+   switch (type) { 
+      case 'starter': 
+        price = 0; 
+        break;
+  
+      case 'professional': 
+        price = 20;
+        break;
+  
+      case 'organization': 
+        price = 50;
+        break;
+    }
+  
+    return price;
+  }
+}
+
+{function checkPassword(password) {
+  const ADMIN_PASSWORD = "jqueryismyjam";
+  let message;
+
+  switch (password) {
+    case null:
+      message = "Canceled by user!";      
+      break;
+    case ADMIN_PASSWORD:
+      message = "Welcome!";
+      break;
+    default:
+      message = "Access denied, wrong password!";
+  }
+
+  return message;
+}
+
+function getShippingCost(country) {
+  let message;
+
+  switch (country) {
+    case 'China':
+      message = `Shipping to China will cost 100 credits`
+      break;
+  
+    case 'Chile':
+      message = `Shipping to Chile will cost 250 credits`
+      break;
+  
+    case 'Australia':
+      message = `Shipping to Australia will cost 170 credits`
+      break;
+  
+    case 'Jamaica':
+      message = `Shipping to Jamaica will cost 120 credits`
+      break;
+  
+    default:
+      message = "Sorry, there is no delivery to your country"
+  }
+
+  return message;
+}
+
 }
