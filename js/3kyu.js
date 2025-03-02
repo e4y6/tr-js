@@ -115,10 +115,27 @@ the "name" property is accessible, but the "firstName" and "lastName" is
   //     : +numbers[0] + +numbers[numbers.length - 1];
   // }
 
-  const calculate = (string) =>
-    eval(
-      string.replace("gains", "+").replace("loses", "-").replace(/[a-z]/gi, "")
-    );
+  // function calculate(string) {
+  //   const numbers = string
+  //     .replace(/[a-z]/gi, "")
+  //     .trim()
+  //     .split(" ")
+  //     .map((e) => Number(e));
 
-  console.log(calculate("Panda has 48 apples and loses 4"));
+  //   return string.includes("loses")
+  //     ? numbers.reduce((res, e) => res - e)
+  //     : numbers.reduce((res, e) => res + e);
+  // }
+
+  const calculate = (string) =>
+    /loses/.test(string)
+      ? string.match(/\d+/g).reduce((res, e) => res - +e)
+      : string.match(/\d+/g).reduce((res, e) => +res + +e);
+
+  // const calculate = (string) =>
+  //   eval(
+  //     string.replace("gains", "+").replace("loses", "-").replace(/[a-z]/gi, "")
+  //   );
+
+  // console.log(calculate("Panda has 48 apples and loses 4"));
 }
