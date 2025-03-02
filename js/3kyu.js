@@ -72,22 +72,38 @@ the "name" property is accessible, but the "firstName" and "lastName" is
       5. popElement(arr)   should pop an element from arr, and then return arr
   When you have finish*/
 
-  function getLength(arr) {
-    c;
-  }
-  function getFirst(arr) {
-    return arr[0];
-  }
-  function getLast(arr) {
-    return arr[arr.length - 1];
-  }
-  function pushElement(arr) {
+  // function getLength(arr) {
+  //   return arr.length;
+  // }
+  // function getFirst(arr) {
+  //   return arr[0];
+  // }
+  // function getLast(arr) {
+  //   return arr[arr.length - 1];
+  // }
+  // function pushElement(arr) {
+  //   const el = 1;
+  //   arr.push(el);
+  //   return arr;
+  // }
+  // function popElement(arr) {
+  //   arr.pop();
+  //   return arr;
+  // }
+
+  const getLength = (arr) => arr.length;
+
+  const getFirst = (arr) => arr[0];
+
+  const getLast = (arr) => arr[arr.length - 1];
+
+  const pushElement = (arr) => {
     const el = 1;
     arr.push(el);
     return arr;
-  }
-  function popElement(arr) {
+  };
+  const popElement = (arr) => {
     arr.pop();
     return arr;
-  }
+  };
 }
