@@ -298,4 +298,21 @@ function getShippingCost(country) {
   return message;
 }
 
+function getNameLength(name) {
+  const message = `Name ${name} is ${name.length} characters long`; 
+
+  return message;
+}
+
+function getSubstring(string, length) {
+  const substring = string.slice(0, length); 
+
+  return substring;
+}
+
+const courseTopic = "JavaScript essentials";
+
+const courseTopicLength = courseTopic.length;
+const firstElement = courseTopic[0];
+const lastElement = courseTopic[courseTopicLength-1];
 }
