@@ -108,12 +108,17 @@ the "name" property is accessible, but the "firstName" and "lastName" is
   };
 }
 {
-  function calculate(string) {
-    const numbers = string.replace(/[a-z]/gi, "").trim().split(" ");
-    return string.includes("loses")
-      ? +numbers[0] - +numbers[numbers.length - 1]
-      : +numbers[0] + +numbers[numbers.length - 1];
-  }
+  // function calculate(string) {
+  //   const numbers = string.replace(/[a-z]/gi, "").trim().split(" ");
+  //   return string.includes("loses")
+  //     ? +numbers[0] - +numbers[numbers.length - 1]
+  //     : +numbers[0] + +numbers[numbers.length - 1];
+  // }
+
+  const calculate = (string) =>
+    eval(
+      string.replace("gains", "+").replace("loses", "-").replace(/[a-z]/gi, "")
+    );
 
   console.log(calculate("Panda has 48 apples and loses 4"));
 }
