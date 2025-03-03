@@ -160,8 +160,11 @@ Examples
   //   return names.map((e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
   // }
 
+  // const capMe = (names) =>
+  //   names.map((e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
+
   const capMe = (names) =>
-    names.map((e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
+    names.map((e) => e.toLowerCase().replace(/\w/, (w) => w.toUpperCase()));
 
   console.log(capMe(["RALPH", "GEORGIA", "CHRISTINA"]));
 }
