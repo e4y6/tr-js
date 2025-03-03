@@ -139,3 +139,26 @@ the "name" property is accessible, but the "firstName" and "lastName" is
 
   // console.log(calculate("Panda has 48 apples and loses 4"));
 }
+
+{
+  /** 7 kyu
+Name Array Capping
+751691% of 6864,052 of 8,099ogryzek1 Issue Reported
+ JavaScript
+Node v18.x
+VIM
+EMACS
+Instructions
+Output
+Create a function that accepts an array of names, and returns an array of each name with its first letter capitalized and the remainder in lowercase.
+
+Examples
+['jo', 'nelson', 'jurie'] -->  ['Jo', 'Nelson', 'Jurie']
+['KARLY', 'DANIEL', 'KELSEY'] --> ['Karly', 'Daniel', 'Kelsey']   */
+
+  function capMe(names) {
+    return names.map((e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
+  }
+
+  console.log(capMe(["RALPH", "GEORGIA", "CHRISTINA"]));
+}
