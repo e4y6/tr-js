@@ -163,8 +163,11 @@ Examples
   // const capMe = (names) =>
   //   names.map((e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
 
-  const capMe = (names) =>
-    names.map((e) => e.toLowerCase().replace(/\w/, (w) => w.toUpperCase()));
+  // const capMe = (names) =>
+  //   names.map((e) => e.toLowerCase().replace(/\w/, (w) => w.toUpperCase()));
 
-  console.log(capMe(["RALPH", "GEORGIA", "CHRISTINA"]));
+  const capMe = (names) =>
+    names.map((e) => e.toLowerCase().replace(/./, (w) => w.toUpperCase()));
+
+  console.log(capMe(["RALPH", "GEORGIA", "CHRISTINA", "po"]));
 }
