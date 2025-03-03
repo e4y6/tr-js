@@ -156,9 +156,12 @@ Examples
 ['jo', 'nelson', 'jurie'] -->  ['Jo', 'Nelson', 'Jurie']
 ['KARLY', 'DANIEL', 'KELSEY'] --> ['Karly', 'Daniel', 'Kelsey']   */
 
-  function capMe(names) {
-    return names.map((e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
-  }
+  // function capMe(names) {
+  //   return names.map((e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
+  // }
+
+  const capMe = (names) =>
+    names.map((e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
 
   console.log(capMe(["RALPH", "GEORGIA", "CHRISTINA"]));
 }
