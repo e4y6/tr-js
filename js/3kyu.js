@@ -236,9 +236,11 @@ countGrade([-1,-1,-1,-1,-1,-1]) sho */
   Task
   Your task is to create a method, Math.roundTo(number, precision) which rounds a given number to precision decimal places. */
 
-  Math.roundTo = function (number, precision) {
-    return Number(number.toFixed(precision));
-  };
+  // Math.roundTo = function (number, precision) {
+  //   return Number(number.toFixed(precision));
+  // };
 
-  console.log(Math.roundTo(3.1415926535, 4));
+  Math.roundTo = (number, precision) => Number(number.toFixed(precision));
+
+  // console.log(Math.roundTo(3.1415926535, 4));
 }
