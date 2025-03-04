@@ -189,28 +189,38 @@ countGrade([50,60,70,80,90,100]) should return {S:1, A:1, B:1, C:2, D:1, X:0}
 countGrade([65,75,,85,85,95,100,100]) should return {S:2, A:1, B:2, C:2, D:0, X:0}
 countGrade([-1,-1,-1,-1,-1,-1]) sho */
 
-  const countGrade = (scores) => {
-    const keys = ["S", "A", "B", "C", "D", "X"];
-    let obj = {};
-    keys.map((e) => {
-      if (e === "S")
-        obj = { ...obj, S: scores.filter((sc) => sc === 100).length };
-      if (e === "A")
-        obj = {
-          ...obj,
-          A: scores.filter((sc) => sc >= 90 && sc < 100).length,
-        };
-      if (e === "B")
-        obj = { ...obj, B: scores.filter((sc) => sc >= 80 && sc < 90).length };
-      if (e === "C")
-        obj = { ...obj, C: scores.filter((sc) => sc >= 60 && sc < 80).length };
-      if (e === "D")
-        obj = { ...obj, D: scores.filter((sc) => sc >= 0 && sc < 60).length };
-      if (e === "X")
-        obj = { ...obj, X: scores.filter((sc) => sc === -1).length };
-    });
+  // const countGrade = (scores) => {
+  //   const keys = ["S", "A", "B", "C", "D", "X"];
+  //   let obj = {};
+  //   keys.map((e) => {
+  //     if (e === "S")
+  //       obj = { ...obj, S: scores.filter((sc) => sc === 100).length };
+  //     if (e === "A")
+  //       obj = {
+  //         ...obj,
+  //         A: scores.filter((sc) => sc >= 90 && sc < 100).length,
+  //       };
+  //     if (e === "B")
+  //       obj = { ...obj, B: scores.filter((sc) => sc >= 80 && sc < 90).length };
+  //     if (e === "C")
+  //       obj = { ...obj, C: scores.filter((sc) => sc >= 60 && sc < 80).length };
+  //     if (e === "D")
+  //       obj = { ...obj, D: scores.filter((sc) => sc >= 0 && sc < 60).length };
+  //     if (e === "X")
+  //       obj = { ...obj, X: scores.filter((sc) => sc === -1).length };
+  //   });
 
-    return obj;
-  };
+  //   return obj;
+  // };
+
+  const countGrade = (scores) => ({
+    S: scores.filter((sc) => sc === 100).length,
+    A: scores.filter((sc) => sc >= 90 && sc < 100).length,
+    B: scores.filter((sc) => sc >= 80 && sc < 90).length,
+    C: scores.filter((sc) => sc >= 60 && sc < 80).length,
+    D: scores.filter((sc) => sc >= 0 && sc < 60).length,
+    X: scores.filter((sc) => sc === -1).length,
+  });
+
   console.log(countGrade([50, 60, 70, 80, 90, 100]));
 }
