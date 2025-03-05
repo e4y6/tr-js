@@ -46,4 +46,19 @@
   function splitMessage(message, delimiter) {
     return message.split(delimiter);
   }
+
+  function calculateEngravingPrice(message, pricePerWord) {
+    return message.split(" ").length * pricePerWord;
+  }
+
+  function makeStringFromArray(array, delimiter) {
+    return array.join(delimiter);
+  }
+  console.log(
+    makeStringFromArray(["Mango", "hurries", "to", "the", "train."], " ")
+  );
+
+  function slugify(title) {
+    return title.toLowerCase().split(" ").join("-");
+  }
 }
