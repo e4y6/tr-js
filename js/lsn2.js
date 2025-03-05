@@ -61,4 +61,17 @@
   function slugify(title) {
     return title.toLowerCase().split(" ").join("-");
   }
+
+  const firstTwoEls = fruits.slice(0, 2);
+  const nonExtremeEls = fruits.slice(1, -1);
+  const lastThreeEls = fruits.slice(-3);
+
+  const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
+  const newClients = ["Peach", "Houston"];
+
+  const allClients = oldClients.concat(newClients);
+
+  function makeArray(firstArray, secondArray, maxLength) {
+    return firstArray.concat(secondArray).slice(0, maxLength);
+  }
 }
