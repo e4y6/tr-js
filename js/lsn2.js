@@ -5,3 +5,12 @@ function checkAge(age) {
 
   return "You are a minor";
 }
+
+function checkPassword(password) {
+  const ADMIN_PASSWORD = "jqueryismyjam";
+
+  if (password === ADMIN_PASSWORD) {
+    return "Welcome!";
+  }
+  return "Access denied, wrong password!";
+}
