@@ -54,9 +54,9 @@
   function makeStringFromArray(array, delimiter) {
     return array.join(delimiter);
   }
-  console.log(
-    makeStringFromArray(["Mango", "hurries", "to", "the", "train."], " ")
-  );
+  // console.log(
+  //   makeStringFromArray(["Mango", "hurries", "to", "the", "train."], " ")
+  // );
 
   function slugify(title) {
     return title.toLowerCase().split(" ").join("-");
@@ -74,4 +74,41 @@
   function makeArray(firstArray, secondArray, maxLength) {
     return firstArray.concat(secondArray).slice(0, maxLength);
   }
+
+  const start = 3;
+  const end = 7;
+  for (let i = start; i <= end; i += 1) {
+    // console.log(i);
+  }
+
+  // function calculateTotal(number) {
+  //   let total = 0;
+
+  //   for (let i = 1; i <= number; i += 1) {
+  //     total += i;
+  //   }
+
+  //   return total;
+  // }
+
+  // function calculateTotal(number) {
+  //   let total = 0;
+
+  //   for (let i = number; i > 0; i -= 1) {
+  //     total += i;
+  //   }
+
+  //   return total;
+  // }
+
+  // function calculateTotal(number, total = number) {
+  //   if (number < 2) return total;
+
+  //   return calculateTotal((number -= 1), (total += number));
+  // }
+
+  const calculateTotal = (number, total = number) =>
+    number < 2 ? total : calculateTotal((number -= 1), (total += number));
+
+  // console.log(calculateTotal(5));
 }
