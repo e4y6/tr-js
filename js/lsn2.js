@@ -111,4 +111,28 @@
     number < 2 ? total : calculateTotal((number -= 1), (total += number));
 
   // console.log(calculateTotal(5));
+
+  for (let i = 0; i < fruits.length; i += 1) {
+    // console.log(fruits[i]);
+  }
+
+  // function calculateTotalPrice(order) {
+  //   let total = 0;
+
+  //   for (let i = 0; i < order.length; i += 1) {
+  //     total += order[i];
+  //   }
+  //   return total;
+  // }
+
+  // function calculateTotalPrice(order, n = order.length - 1, total = order[n]) {
+  //   return n < 1
+  //     ? total
+  //     : calculateTotalPrice(order, (n -= 1), (total += order[n]));
+  // }
+
+  const calculateTotalPrice = (order, n = order.length - 1, total = order[n]) =>
+    n < 1 ? total : calculateTotalPrice(order, (n -= 1), (total += order[n]));
+
+  // console.log(calculateTotalPrice([12, 85, 37, 4]));
 }
