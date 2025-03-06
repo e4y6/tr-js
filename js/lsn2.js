@@ -158,4 +158,19 @@
       : createArrayOfNumbers(min, max, [...numbers, min]);
   }
   // console.log(createArrayOfNumbers(2, 15));
+
+  // function filterArray(numbers, value) {
+  //   return numbers.filter((e) => e > value);
+  // }
+
+  // function filterArray(numbers, value) {
+  //   const result = [];
+  //   for (let i = 0; i < numbers.length; i += 1) {
+  //     if (numbers[i] > value) result.push(numbers[i]);
+  //   }
+  //   return result;
+  // }
+  const filterArray = (numbers, value) => numbers.filter((e) => e > value);
+
+  // console.log(filterArray([12, 24, 8, 44, 41, 76], 33));
 }
