@@ -173,4 +173,14 @@
   const filterArray = (numbers, value) => numbers.filter((e) => e > value);
 
   // console.log(filterArray([12, 24, 8, 44, 41, 76], 33));
+
+  // function checkFruit(fruit) {
+  //   const fruits = ["apple", "plum", "pear", "orange"];
+  //   return fruits.includes(fruit);
+  // }
+
+  const checkFruit = (fruit, fruits = ["apple", "plum", "pear", "orange"]) =>
+    fruits.includes(fruit);
+
+  // console.log(checkFruit("apple"));
 }
