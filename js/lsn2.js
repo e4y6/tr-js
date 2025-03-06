@@ -142,4 +142,20 @@
     return words[LengthArray.indexOf(Math.max(...LengthArray))];
   }
   // console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+
+  // function createArrayOfNumbers(min, max) {
+  //   const numbers = [];
+  //   for (let i = min; i <= max; i += 1) {
+  //     numbers.push(i);
+  //   }
+  //   return numbers;
+  // }
+
+  function createArrayOfNumbers(min, max, numbers = [min]) {
+    min += 1;
+    return min > max
+      ? numbers
+      : createArrayOfNumbers(min, max, [...numbers, min]);
+  }
+  // console.log(createArrayOfNumbers(2, 15));
 }
