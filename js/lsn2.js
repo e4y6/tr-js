@@ -194,3 +194,22 @@
   }
   // console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
 }
+
+{
+  // function calculateTotalPrice(order) {
+  //   let total = 0;
+  //   for (const element of order) {
+  //     total += element;
+  //   }
+  //   return total;
+  // }
+
+  // function calculateTotalPrice(order) {
+  //   return order.reduce((total, e) => (total += e), 0);
+  // }
+
+  const calculateTotalPrice = (order) =>
+    order.reduce((total, e) => (total += e), 0);
+
+  // console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+}
