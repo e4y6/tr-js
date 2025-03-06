@@ -135,4 +135,11 @@
     n < 1 ? total : calculateTotalPrice(order, (n -= 1), (total += order[n]));
 
   // console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+  function findLongestWord(string) {
+    const words = string.split(" ");
+    const LengthArray = words.map((e) => e.length);
+    return words[LengthArray.indexOf(Math.max(...LengthArray))];
+  }
+  // console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
 }
