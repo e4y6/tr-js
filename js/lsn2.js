@@ -183,4 +183,14 @@
     fruits.includes(fruit);
 
   // console.log(checkFruit("apple"));
+
+  function getCommonElements(array1, array2) {
+    const commonArray = [];
+    for (let i = 0; i < array1.length; i++) {
+      const element = array1[i];
+      if (array2.includes(element)) commonArray.push(element);
+    }
+    return commonArray;
+  }
+  // console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
 }
