@@ -225,4 +225,14 @@
     return filteredNumbers;
   }
   // console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+  function getEvenNumbers(start, end) {
+    const even = [];
+    for (let i = start; i <= end; i++) {
+      if (i % 2) continue;
+      even.push(i);
+    }
+    return even;
+  }
+  console.log(getEvenNumbers(3, 11));
 }
