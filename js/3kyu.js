@@ -243,4 +243,12 @@ countGrade([-1,-1,-1,-1,-1,-1]) sho */
   Math.roundTo = (number, precision) => Number(number.toFixed(precision));
 
   // console.log(Math.roundTo(3.1415926535, 4));
+
+  // function sumSquares(array) {
+  //   return array.reduce((sum, e) => sum + e * e, 0);
+  // }
+
+  const sumSquares = (array) => array.reduce((sum, e) => sum + e * e, 0);
+
+  // console.log(sumSquares([11, 13, 15, 18, 2]));
 }
