@@ -254,4 +254,14 @@
     }
   }
   // console.log(findNumber(22, 33, 4));
+
+  function includes(array, value) {
+    for (let i = 0; i < array.length; i++) {
+      const element = array[i];
+      if (element === value) return true;
+    }
+    return false;
+  }
+
+  // console.log(includes([3, 5, 6, 9, 7], 7));
 }
