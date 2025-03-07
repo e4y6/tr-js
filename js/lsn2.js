@@ -234,5 +234,12 @@
     }
     return even;
   }
-  console.log(getEvenNumbers(3, 11));
+  // console.log(getEvenNumbers(3, 11));
+
+  function getFirstElement(start, end) {
+    for (let i = start; i <= end; i += 1) {
+      if (!(i % 5)) return i;
+    }
+  }
+  // console.log(getFirstElement(22, 66));
 }
