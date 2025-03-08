@@ -267,17 +267,26 @@ countGrade([-1,-1,-1,-1,-1,-1]) sho */
   //   return Math.round(sum * 100) / 100;
   // };
 
-  const sumSquareEvenRootOdd = (ns) => {
-    return (
-      Math.round(
-        ns.reduce(
-          (sum, element) =>
-            element % 2 ? sum + element ** (1 / 2) : sum + element ** 2,
-          0
-        ) * 100
-      ) / 100
-    );
-  };
+  // const sumSquareEvenRootOdd = (ns) => {
+  //   return (
+  //     Math.round(
+  //       ns.reduce(
+  //         (sum, element) =>
+  //           element % 2 ? sum + element ** (1 / 2) : sum + element ** 2,
+  //         0
+  //       ) * 100
+  //     ) / 100
+  //   );
+  // };
+
+  const sumSquareEvenRootOdd = (ns) =>
+    Math.round(
+      ns.reduce(
+        (sum, element) =>
+          element % 2 ? sum + element ** (1 / 2) : sum + element ** 2,
+        0
+      ) * 100
+    ) / 100;
 
   console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));
 }
