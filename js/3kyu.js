@@ -279,14 +279,23 @@ countGrade([-1,-1,-1,-1,-1,-1]) sho */
   //   );
   // };
 
+  // const sumSquareEvenRootOdd = (ns) =>
+  //   Math.round(
+  //     ns.reduce(
+  //       (sum, element) =>
+  //         element % 2 ? sum + element ** (1 / 2) : sum + element ** 2,
+  //       0
+  //     ) * 100
+  //   ) / 100;
+
   const sumSquareEvenRootOdd = (ns) =>
-    Math.round(
-      ns.reduce(
+    +ns
+      .reduce(
         (sum, element) =>
           element % 2 ? sum + element ** (1 / 2) : sum + element ** 2,
         0
-      ) * 100
-    ) / 100;
+      )
+      .toFixed(2);
 
-  console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));
+  // console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));
 }
