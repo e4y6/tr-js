@@ -254,17 +254,29 @@ countGrade([-1,-1,-1,-1,-1,-1]) sho */
 
   /**   */
 
+  // const sumSquareEvenRootOdd = (ns) => {
+  //   let sum = 0;
+  //   for (let i = 0; i < ns.length; i++) {
+  //     const element = ns[i];
+  //     if (element % 2) {
+  //       sum += element ** (1 / 2);
+  //       continue;
+  //     }
+  //     sum += element ** 2;
+  //   }
+  //   return Math.round(sum * 100) / 100;
+  // };
+
   const sumSquareEvenRootOdd = (ns) => {
-    let sum = 0;
-    for (let i = 0; i < ns.length; i++) {
-      const element = ns[i];
-      if (element % 2) {
-        sum += element ** (1 / 2);
-        continue;
-      }
-      sum += element ** 2;
-    }
-    return Math.round(sum * 100) / 100;
+    return (
+      Math.round(
+        ns.reduce(
+          (sum, element) =>
+            element % 2 ? sum + element ** (1 / 2) : sum + element ** 2,
+          0
+        ) * 100
+      ) / 100
+    );
   };
 
   console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));
