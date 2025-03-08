@@ -251,4 +251,21 @@ countGrade([-1,-1,-1,-1,-1,-1]) sho */
   const sumSquares = (array) => array.reduce((sum, e) => sum + e * e, 0);
 
   // console.log(sumSquares([11, 13, 15, 18, 2]));
+
+  /**   */
+
+  const sumSquareEvenRootOdd = (ns) => {
+    let sum = 0;
+    for (let i = 0; i < ns.length; i++) {
+      const element = ns[i];
+      if (element % 2) {
+        sum += element ** (1 / 2);
+        continue;
+      }
+      sum += element ** 2;
+    }
+    return Math.round(sum * 100) / 100;
+  };
+
+  console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));
 }
