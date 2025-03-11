@@ -311,3 +311,8 @@
     } while (s.length < 4);
   }
 }
+
+function remove(string) {
+  return string.replace(/!+(\s*)(\w)/g, "$1$2");
+}
+// console.log(remove("!Hi!hi !!Hi!!!!"));
