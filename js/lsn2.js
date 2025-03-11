@@ -289,4 +289,8 @@
     return price;
   }
   // console.log(getPrice(3));
+
+  const randomSalary = (min, max) =>
+    Math.round(Math.random() * (max - min) + min);
+  // console.log(randomSalary(225, 379));
 }
