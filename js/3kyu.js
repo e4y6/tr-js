@@ -307,6 +307,6 @@ The list will never be empty and will only contain values that are greater
   // console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));
 
   const remove = (string) => string.replace(/!+(\s*)(\w)/g, "$1$2");
-  console.log(remove("Hi! Hi!", "Hi Hi!"));
-  console.log(remove("!Hi!", "Hi Hi!"));
+  // console.log(remove("Hi! Hi!"));
+  // console.log(remove("!Hi!"));
 }

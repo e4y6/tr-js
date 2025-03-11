@@ -264,4 +264,29 @@
   }
 
   // console.log(includes([3, 5, 6, 9, 7], 7));
+
+  function getPrice(starQuantity) {
+    let price;
+    switch (starQuantity) {
+      case 1:
+        price = 20;
+        break;
+      case 2:
+        price = 30;
+        break;
+      case 3:
+        price = 50;
+        break;
+      case 2:
+        price = 60;
+        break;
+      case 5:
+        price = 70;
+        break;
+      default:
+        return "The wrong choice";
+    }
+    return price;
+  }
+  // console.log(getPrice(3));
 }
