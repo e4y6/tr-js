@@ -293,4 +293,21 @@
   const randomSalary = (min, max) =>
     Math.round(Math.random() * (max - min) + min);
   // console.log(randomSalary(225, 379));
+
+  for (let i = "1"; i.length < 6; i += 1) {
+    // console.log(i);
+  }
+
+  {
+    let s = "";
+    {
+      // while (s.length < 5) {
+      // console.log((s += 1));
+      // }
+    }
+
+    do {
+      console.log((s += 1));
+    } while (s.length < 4);
+  }
 }
