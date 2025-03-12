@@ -334,14 +334,23 @@ function remove(string) {
   blackAndWhite([5,13]) should return "It's a black array"
   blackAndWhite([5,12]) should return " */
 
+  // function blackAndWhite(arr) {
+  //   if (!Array.isArray(arr)) {
+  //     return "It's a fake array";
+  //   }
+  //   if (arr.includes(5) && arr.includes(13)) {
+  //     return "It's a black array";
+  //   }
+  //   return "It's a white array";
+  // }
+
   function blackAndWhite(arr) {
-    if (!Array.isArray(arr)) {
-      return "It's a fake array";
-    }
-    if (arr.includes(5) && arr.includes(13)) {
-      return "It's a black array";
-    }
-    return "It's a white array";
+    return !Array.isArray(arr)
+      ? "It's a fake array"
+      : arr.includes(5) && arr.includes(13)
+      ? "It's a black array"
+      : "It's a white array";
   }
+
   console.log(blackAndWhite([5, 13]));
 }
