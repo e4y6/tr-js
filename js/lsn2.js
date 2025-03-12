@@ -359,14 +359,23 @@ function remove(string) {
   //     ? "It's a black array"
   //     : "It's a white array";
 
-  const blackAndWhite = (arr) =>
-    `It's a ${
-      !Array.isArray(arr)
-        ? `fake`
-        : arr.includes(5) && arr.includes(13)
-        ? `black`
-        : `white`
-    } array`;
+  // const blackAndWhite = (arr) =>
+  //   `It's a ${
+  //     !Array.isArray(arr)
+  //       ? `fake`
+  //       : arr.includes(5) && arr.includes(13)
+  //       ? `black`
+  //       : `white`
+  //   } array`;
 
-  console.log(blackAndWhite([5, 13]));
+  const blackAndWhite = (arr) =>
+    "It's a " +
+    (!Array.isArray(arr)
+      ? "fake"
+      : arr.includes(5) && arr.includes(13)
+      ? `black`
+      : `white`) +
+    " array";
+
+  // console.log(blackAndWhite([5, 13]));
 }
