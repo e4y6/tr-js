@@ -344,13 +344,20 @@ function remove(string) {
   //   return "It's a white array";
   // }
 
-  function blackAndWhite(arr) {
-    return !Array.isArray(arr)
+  // function blackAndWhite(arr) {
+  //   return !Array.isArray(arr)
+  //     ? "It's a fake array"
+  //     : arr.includes(5) && arr.includes(13)
+  //     ? "It's a black array"
+  //     : "It's a white array";
+  // }
+
+  const blackAndWhite = (arr) =>
+    !Array.isArray(arr)
       ? "It's a fake array"
       : arr.includes(5) && arr.includes(13)
       ? "It's a black array"
       : "It's a white array";
-  }
 
   console.log(blackAndWhite([5, 13]));
 }
