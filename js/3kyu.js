@@ -403,12 +403,26 @@ You will get an array as input with time durations as string in the following fo
   Determine whether he can do it in 24 hours or not. In case the time required 
   to deliver all of the presents is exactly 24 hours, Santa can complete the delivery ;-) . */
 
+  // function determineTime(durations) {
+  //   return (
+  //     durations
+  //       .map((e) => e.split(":").reverse())
+  //       .reduce(
+  //         (total, el) => total + (+el[0] + el[1] * 60 + el[2] * 3600),
+  //         0
+  //       ) /
+  //       24 /
+  //       3600 <=
+  //     1
+  //   );
+  // }
+
   function determineTime(durations) {
     return (
       durations
-        .map((e) => e.split(":").reverse())
+        .map((e) => e.split(":"))
         .reduce(
-          (total, el) => total + (+el[0] + el[1] * 60 + el[2] * 3600),
+          (total, el) => total + (el[0] * 3600 + el[1] * 60 + +el[2]),
           0
         ) /
         24 /
