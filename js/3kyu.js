@@ -417,18 +417,27 @@ You will get an array as input with time durations as string in the following fo
   //   );
   // }
 
-  function determineTime(durations) {
-    return (
-      durations
-        .map((e) => e.split(":"))
-        .reduce(
-          (total, el) => total + (el[0] * 3600 + el[1] * 60 + +el[2]),
-          0
-        ) /
-        24 /
-        3600 <=
-      1
-    );
-  }
+  // function determineTime(durations) {
+  //   return (
+  //     durations
+  //       .map((e) => e.split(":"))
+  //       .reduce(
+  //         (total, el) => total + (el[0] * 3600 + el[1] * 60 + +el[2]),
+  //         0
+  //       ) /
+  //       24 /
+  //       3600 <=
+  //     1
+  //   );
+  // }
+
+  const determineTime = (durations) =>
+    durations
+      .map((e) => e.split(":"))
+      .reduce((total, el) => total + (el[0] * 3600 + el[1] * 60 + +el[2]), 0) /
+      24 /
+      3600 <=
+    1;
+
   console.log(determineTime(["04:30:00", "02:00:00", "01:30:00", "16:00:00"]));
 }
