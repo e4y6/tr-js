@@ -387,5 +387,7 @@ To make this challange harder and to promp the challenger to read up about coerc
   //   return +a === +b;
   // }
 
+  // const add = (a, b) => a == b;
+
   const add = (a, b) => +a === +b;
 }
