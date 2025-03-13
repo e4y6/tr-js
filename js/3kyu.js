@@ -390,4 +390,31 @@ To make this challange harder and to promp the challenger to read up about coerc
   // const add = (a, b) => a == b;
 
   const add = (a, b) => +a === +b;
+
+  /**  7 kyu  Can Santa save Christmas?
+Can Santa save Christmas?
+Oh no! Santa's little elves are sick this year. He has to distribute the presents 
+on his own.
+But he has only 24 hours left. Can he do it?
+
+ Task:
+You will get an array as input with time durations as string in the following format:
+ HH:MM:SS. Each duration represents the time taken by Santa to deliver a present.
+  Determine whether he can do it in 24 hours or not. In case the time required 
+  to deliver all of the presents is exactly 24 hours, Santa can complete the delivery ;-) . */
+
+  function determineTime(durations) {
+    return (
+      durations
+        .map((e) => e.split(":").reverse())
+        .reduce(
+          (total, el) => total + (+el[0] + el[1] * 60 + el[2] * 3600),
+          0
+        ) /
+        24 /
+        3600 <=
+      1
+    );
+  }
+  console.log(determineTime(["04:30:00", "02:00:00", "01:30:00", "16:00:00"]));
 }
