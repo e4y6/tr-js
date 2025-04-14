@@ -498,9 +498,9 @@ You will get an array as input with time durations as string in the following fo
 
   // const isReallyNaN = (val) => Number.isNaN(val);
 
-  // const isReallyNaN = Number.isNaN;
+  const isReallyNaN = Number.isNaN;
 
-  const isReallyNaN = (val) => val !== val;
+  // const isReallyNaN = (val) => val !== val;
 
-  console.log(isReallyNaN(undefined));
+  // console.log(isReallyNaN(undefined));
 }
