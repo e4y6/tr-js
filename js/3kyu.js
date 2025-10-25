@@ -504,3 +504,16 @@ You will get an array as input with time durations as string in the following fo
 
   // console.log(isReallyNaN(undefined));
 }
+{
+  function geometricSequenceElements(a, r, n) {
+    const res = [a];
+
+    for (let index = 0; index < n - 1; index++) {
+      res.push((a *= r));
+    }
+
+    return res.join(", ");
+  }
+
+  console.log(geometricSequenceElements(2, 3, 5));
+}
