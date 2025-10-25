@@ -505,6 +505,15 @@ You will get an array as input with time durations as string in the following fo
   // console.log(isReallyNaN(undefined));
 }
 {
+  /** 
+7 kyu
+Geometric Progression Sequence
+In your class, you have started lessons about geometric progression. Since you are also a programmer, you have decided to write a function that will print first n elements of the sequence with the given constant r and first element a.
+
+Result should be separated by comma and space.
+Example
+geometricSequenceElements(2, 3, 5) == '2, 6, 18, 54, 162'    */
+
   // function geometricSequenceElements(a, r, n) {
   //   const res = [a];
 
@@ -524,13 +533,16 @@ You will get an array as input with time durations as string in the following fo
   //   ].join(", ");
   // }
 
+  // const geometricSequenceElements = (a, r, n) =>
+  //   [
+  //     a,
+  //     ...Array(n - 1)
+  //       .fill(a)
+  //       .map((e, i, arr) => (arr[0] *= r)),
+  //   ].join(", ");
+
   const geometricSequenceElements = (a, r, n) =>
-    [
-      a,
-      ...Array(n - 1)
-        .fill(a)
-        .map((e, i, arr) => (arr[0] *= r)),
-    ].join(", ");
+    Array.from({ length: n }, (e = a, i) => e * r ** i).join(", ");
 
   console.log(geometricSequenceElements(2, 3, 5));
 }
