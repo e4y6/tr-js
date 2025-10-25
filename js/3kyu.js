@@ -515,14 +515,22 @@ You will get an array as input with time durations as string in the following fo
   //   return res.join(", ");
   // }
 
-  function geometricSequenceElements(a, r, n) {
-    return [
+  // function geometricSequenceElements(a, r, n) {
+  //   return [
+  //     a,
+  //     ...Array(n - 1)
+  //       .fill(a)
+  //       .map((e, i, arr) => (arr[0] *= r)),
+  //   ].join(", ");
+  // }
+
+  const geometricSequenceElements = (a, r, n) =>
+    [
       a,
       ...Array(n - 1)
         .fill(a)
         .map((e, i, arr) => (arr[0] *= r)),
     ].join(", ");
-  }
 
   console.log(geometricSequenceElements(2, 3, 5));
 }
