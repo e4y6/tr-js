@@ -577,7 +577,9 @@ geometricSequenceElements(2, 3, 5) == '2, 6, 18, 54, 162'    */
 }
 
 {
-  const last = (xs) => (xs.length ? [...xs].slice(-1)[0] : null);
+  // const last = (xs) => (xs.length ? [...xs].slice(-1)[0] : null);
+
+  const last = (xs) => (xs.length ? xs[xs.length - 1] : null);
 
   console.log(last([3, 8, 16, 47, 30, 30, 46]));
 }
