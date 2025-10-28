@@ -548,14 +548,30 @@ geometricSequenceElements(2, 3, 5) == '2, 6, 18, 54, 162'    */
 }
 
 {
-  function pendulum(values) {
-    const arr = [];
+  // function pendulum(values) {
+  //   const arr = [];
+  //   values
+  //     .sort((a, b) => a - b)
+  //     .map((e, i, ar) => (!(i % 2) ? arr.unshift(e) : arr.push(e)));
+
+  //   return arr;
+  // }
+
+  // function pendulum(values, arr = []) {
+  //   values
+  //     .sort((a, b) => a - b)
+  //     .map((e, i, ar) => (!(i % 2) ? arr.unshift(e) : arr.push(e)));
+
+  //   return arr;
+  // }
+
+  const pendulum = (values) =>
     values
       .sort((a, b) => a - b)
-      .map((e, i, ar) => (!(i % 2) ? arr.unshift(e) : arr.push(e)));
+      .reduce(
+        (arr, e) => (arr.length % 2 ? [...arr, e] : [e, ...arr]),
+        []
+      ); /** Execution Timed Out (12000 ms) */
 
-    return arr;
-  }
-
-  console.log(pendulum([-9, -2, 8, -10, -6]));
+  // console.log(pendulum([-9, -2, 8, -10, -6]));
 }
