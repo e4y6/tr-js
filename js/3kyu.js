@@ -544,5 +544,18 @@ geometricSequenceElements(2, 3, 5) == '2, 6, 18, 54, 162'    */
   const geometricSequenceElements = (a, r, n) =>
     Array.from({ length: n }, (e = a, i) => e * r ** i).join(", ");
 
-  console.log(geometricSequenceElements(2, 3, 5));
+  // console.log(geometricSequenceElements(2, 3, 5));
+}
+
+{
+  function pendulum(values) {
+    const arr = [];
+    values
+      .sort((a, b) => a - b)
+      .map((e, i, ar) => (!(i % 2) ? arr.unshift(e) : arr.push(e)));
+
+    return arr;
+  }
+
+  console.log(pendulum([-9, -2, 8, -10, -6]));
 }
