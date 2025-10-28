@@ -633,5 +633,7 @@ tCopy = [1, 2, 3, 4]
 
   // const copyList = (l) => [...l];
 
-  const copyList = (l) => l.slice();
+  // const copyList = (l) => l.slice();
+
+  const copyList = (l) => JSON.parse(JSON.stringify(l));
 }
