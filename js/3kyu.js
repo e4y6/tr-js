@@ -629,4 +629,6 @@ tCopy = [1, 2, 3, 4]
   function copyList(l) {
     return [...l];
   }
+
+  const copyList = (l) => [...l];
 }
