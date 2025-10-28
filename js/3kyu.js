@@ -581,7 +581,19 @@ geometricSequenceElements(2, 3, 5) == '2, 6, 18, 54, 162'    */
 
   // const last = (xs) => (xs.length ? xs[xs.length - 1] : null);
 
-  const last = (xs) => (xs.length ? xs.pop() : null);
+  // const last = (xs) => (xs.length ? xs.pop() : null);
 
-  console.log(last([3, 8, 16, 47, 30, 30, 46]));
+  const last = (xs) => [null, ...xs].pop();
+
+  // console.log(last([3, 8, 16, 47, 30, 30, 46]));
+}
+
+{
+  /**  
+8 kyu
+Mr. Freeze
+There is an object/class already created called MrFreeze. Mark this object as frozen so that no other changes can be made to it.
+ */
+  const MrFreeze = {};
+  Object.freeze(MrFreeze);
 }
