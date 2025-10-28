@@ -575,3 +575,9 @@ geometricSequenceElements(2, 3, 5) == '2, 6, 18, 54, 162'    */
 
   // console.log(pendulum([-9, -2, 8, -10, -6]));
 }
+
+{
+  const last = (xs) => (xs.length ? [...xs].slice(-1)[0] : null);
+
+  console.log(last([3, 8, 16, 47, 30, 30, 46]));
+}
