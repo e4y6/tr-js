@@ -626,9 +626,12 @@ t[1] += 5
 t = [1, 7, 3, 4]
 tCopy = [1, 2, 3, 4]
  */
-  function copyList(l) {
-    return [...l];
-  }
 
-  const copyList = (l) => [...l];
+  // function copyList(l) {
+  //   return [...l];
+  // }
+
+  // const copyList = (l) => [...l];
+
+  const copyList = (l) => l.slice();
 }
