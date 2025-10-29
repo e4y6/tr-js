@@ -637,3 +637,11 @@ tCopy = [1, 2, 3, 4]
 
   const copyList = (l) => JSON.parse(JSON.stringify(l));
 }
+
+{
+  function createArrayOfTiers(num) {
+    return [...(num + "")].map((e, i) => (num + "").slice(0, i + 1));
+  }
+
+  console.log(createArrayOfTiers(768));
+}
