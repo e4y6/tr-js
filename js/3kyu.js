@@ -657,11 +657,12 @@ PS: The input is guaranteed to be an integer in the range [0, 1000000]
   //   return [...(num + "")].map((e, i) => (num + "").slice(0, i + 1));
   // }
 
-  // const createArrayOfTiers = (num) =>
-  //   [...(num + "")].map((e, i) => (num + "").slice(0, i + 1));
+  // const createArrayOfTiers = (num) => [...(num + "")].map((e, i) => (num + "").slice(0, i + 1));
 
-  const createArrayOfTiers = (num, s = "") =>
-    [...(num + s)].map((e) => (s += e));
+  // const createArrayOfTiers = (num, s = "") => [...(num + s)].map((e) => (s += e));
 
-  console.log(createArrayOfTiers(768));
+  const createArrayOfTiers = (num) =>
+    Array((num + "").split(""))[0].map((e, i) => (num + "").slice(0, i + 1));
+
+  // console.log(createArrayOfTiers(768));
 }
