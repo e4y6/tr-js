@@ -677,8 +677,9 @@ eg:
 spread(someFunction, [1, true, "Foo", "bar"] ) 
 // is the same as...
 someFunction(1, true, "Foo", "bar")    */
+  // function spread(func, args) {
+  //   return func(...args);
+  // }
 
-  function spread(func, args) {
-    return func(...args);
-  }
+  const spread = (func, args) => func(...args);
 }
