@@ -802,8 +802,15 @@ xyxyxyxyxy  <---The effect when you console.log it
   //   return [1, 1, 1, 1, 1].map((e, i) => s.trim().repeat(i + 1)).join("\n");
   // }
 
-  const fiveLine = (s) =>
-    [1, 1, 1, 1, 1].map((e, i) => s.trim().repeat(i + 1)).join("\n");
+  // const fiveLine = (s) =>
+  //   [1, 1, 1, 1, 1].map((e, i) => s.trim().repeat(i + 1)).join("\n");
 
-  console.log(fiveLine("   xy "));
+  const fiveLine = (s) => {
+    s = s.trim();
+    let str = s;
+
+    return [s, (str += s), (str += s), (str += s), (str += s)].join("\n");
+  };
+
+  // console.log(fiveLine("   xy "));
 }
