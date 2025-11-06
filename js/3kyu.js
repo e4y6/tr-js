@@ -786,11 +786,16 @@ xyxyxyxyxy  <---The effect when you console.log it
   //     .repeat(3)}\n${s.trim().repeat(4)}\n${s.trim().repeat(5)}`;
   // }
 
+  // function fiveLine(s) {
+  //   s = s.trim();
+  //   return `${s}\n${s.repeat(2)}\n${s.repeat(3)}\n${s.repeat(4)}\n${s.repeat(
+  //     5
+  //   )}`;
+  // }
+
   function fiveLine(s) {
     s = s.trim();
-    return `${s}\n${s.repeat(2)}\n${s.repeat(3)}\n${s.repeat(4)}\n${s.repeat(
-      5
-    )}`;
+    return [1, 1, 1, 1, 1].map((e, i) => s.repeat(i + 1)).join("\n");
   }
 
   console.log(fiveLine("   xy "));
