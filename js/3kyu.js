@@ -780,10 +780,17 @@ xyxyxyxy
 xyxyxyxyxy  <---The effect when you console.log it
  */
 
+  // function fiveLine(s) {
+  //   return `${s.trim().repeat(1)}\n${s.trim().repeat(2)}\n${s
+  //     .trim()
+  //     .repeat(3)}\n${s.trim().repeat(4)}\n${s.trim().repeat(5)}`;
+  // }
+
   function fiveLine(s) {
-    return `${s.trim().repeat(1)}\n${s.trim().repeat(2)}\n${s
-      .trim()
-      .repeat(3)}\n${s.trim().repeat(4)}\n${s.trim().repeat(5)}`;
+    s = s.trim();
+    return `${s}\n${s.repeat(2)}\n${s.repeat(3)}\n${s.repeat(4)}\n${s.repeat(
+      5
+    )}`;
   }
 
   console.log(fiveLine("   xy "));
