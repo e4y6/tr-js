@@ -845,12 +845,22 @@ const forbidden = "
   //   }
   // }
 
+  // function reverse(n) {
+  //   let res = 0;
+  //   while (n) {
+  //     res *= 10;
+  //     res += n % 10;
+  //     n = Math.trunc(n / 10);
+  //   }
+  //   return res;
+  // }
+
   function reverse(n) {
     let res = 0;
     while (n) {
       res *= 10;
       res += n % 10;
-      n = Math.trunc(n / 10);
+      n = (n / 10) ^ 0;
     }
     return res;
   }
