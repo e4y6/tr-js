@@ -855,15 +855,23 @@ const forbidden = "
   //   return res;
   // }
 
-  function reverse(n) {
-    let res = 0;
+  // function reverse(n) {
+  //   let res = 0;
+  //   while (n) {
+  //     res *= 10;
+  //     res += n % 10;
+  //     n = (n / 10) ^ 0;
+  //   }
+  //   return res;
+  // }
+
+  const reverse = (n, res = 0) => {
     while (n) {
-      res *= 10;
-      res += n % 10;
-      n = (n / 10) ^ 0;
+      res = res * 10 + (n % 10);
+      n = Math.floor(n / 10);
     }
     return res;
-  }
+  };
 
-  console.log(reverse(1234));
+  // console.log(reverse(1234));
 }
