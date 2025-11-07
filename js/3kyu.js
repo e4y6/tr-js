@@ -816,19 +816,43 @@ xyxyxyxyxy  <---The effect when you console.log it
 }
 
 {
-  function reverse(n) {
-    const arr = [];
+  /**  
+7 kyu
+Reverser
+Impliment the reverse function, which takes in input n and reverses it. For instance, reverse(123) should return 321. You should do this without converting the inputted number into a string.
 
-    for (let i = 0; n > 0; i++) {
-      const element = n - (n % 10);
-      arr.push(n % 10);
-      if (element) {
-        n = element / 10;
-        console.log(element, n);
-      } else {
-        return arr.reverse().reduce((res, e, i, ar) => res + e * 10 ** i, 0);
-      }
+// Please do not use
+const forbidden = "
+                  '
+                  `
+                  string
+                  fixed
+                  precision
+                  .keys       */
+
+  // function reverse(n) {
+  //   const arr = [];
+
+  //   for (let i = 0; n > 0; i++) {
+  //     const element = n - (n % 10);
+  //     arr.push(n % 10);
+  //     if (element) {
+  //       n = element / 10;
+  //       console.log(element, n);
+  //     } else {
+  //       return arr.reverse().reduce((res, e, i, ar) => res + e * 10 ** i, 0);
+  //     }
+  //   }
+  // }
+
+  function reverse(n) {
+    let res = 0;
+    while (n) {
+      res *= 10;
+      res += n % 10;
+      n = Math.trunc(n / 10);
     }
+    return res;
   }
 
   console.log(reverse(1234));
