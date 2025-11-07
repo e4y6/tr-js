@@ -814,3 +814,22 @@ xyxyxyxyxy  <---The effect when you console.log it
 
   // console.log(fiveLine("   xy "));
 }
+
+{
+  function reverse(n) {
+    const arr = [];
+
+    for (let i = 0; n > 0; i++) {
+      const element = n - (n % 10);
+      arr.push(n % 10);
+      if (element) {
+        n = element / 10;
+        console.log(element, n);
+      } else {
+        return arr.reverse().reduce((res, e, i, ar) => res + e * 10 ** i, 0);
+      }
+    }
+  }
+
+  console.log(reverse(1234));
+}
