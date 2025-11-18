@@ -978,12 +978,19 @@ Empty string should return 0. The string can contain spaces and letters (upper a
     10: "QZ",
   };
 
-  function scrabbleScore(str) {
-    const s = str.replaceAll(" ", "").toUpperCase();
-    const keys = Object.keys(dict);
+  // function scrabbleScore(str) {
+  //   const s = str.replaceAll(" ", "").toUpperCase();
+  //   const keys = Object.keys(dict);
 
-    return [...s].reduce(
-      (sum, e) => sum + +keys.find((key) => dict[key].includes(e)),
+  //   return [...s].reduce(
+  //     (sum, e) => sum + +keys.find((key) => dict[key].includes(e)),
+  //     0
+  //   );
+  // }
+
+  function scrabbleScore(str) {
+    return [...str.replaceAll(" ", "").toUpperCase()].reduce(
+      (sum, e) => sum + +Object.keys(dict).find((key) => dict[key].includes(e)),
       0
     );
   }
