@@ -988,12 +988,18 @@ Empty string should return 0. The string can contain spaces and letters (upper a
   //   );
   // }
 
-  function scrabbleScore(str) {
-    return [...str.replaceAll(" ", "").toUpperCase()].reduce(
+  // function scrabbleScore(str) {
+  //   return [...str.replaceAll(" ", "").toUpperCase()].reduce(
+  //     (sum, e) => sum + +Object.keys(dict).find((key) => dict[key].includes(e)),
+  //     0
+  //   );
+  // }
+
+  const scrabbleScore = (str) =>
+    [...str.replaceAll(" ", "").toUpperCase()].reduce(
       (sum, e) => sum + +Object.keys(dict).find((key) => dict[key].includes(e)),
       0
     );
-  }
 
   console.log(scrabbleScore("cabbage"));
 }
