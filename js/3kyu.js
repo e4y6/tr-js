@@ -995,11 +995,23 @@ Empty string should return 0. The string can contain spaces and letters (upper a
   //   );
   // }
 
+  // const scrabbleScore = (str) =>
+  //   [...str.replaceAll(" ", "").toUpperCase()].reduce(
+  //     (sum, e) => sum + +Object.keys(dict).find((key) => dict[key].includes(e)),
+  //     0
+  //   );
+
   const scrabbleScore = (str) =>
-    [...str.replaceAll(" ", "").toUpperCase()].reduce(
-      (sum, e) => sum + +Object.keys(dict).find((key) => dict[key].includes(e)),
+    [...str.replaceAll(" ", "")].reduce(
+      (sum, e) =>
+        sum +
+        +Object.keys(dict).find((key) => dict[key].includes(e.toUpperCase())),
       0
     );
 
-  console.log(scrabbleScore("cabbage"));
+  // console.log(scrabbleScore("cab  bage"));
+}
+
+{
+  /** */
 }
