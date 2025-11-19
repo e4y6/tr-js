@@ -1120,9 +1120,11 @@ SafeInteger(9007199254740992) //false
 
  */
 
-  function SafeInteger(n) {
-    return Number.isSafeInteger(n);
-  }
+  // function SafeInteger(n) {
+  //   return Number.isSafeInteger(n);
+  // }
+
+  const SafeInteger = (n) => Number.isSafeInteger(n);
 
   console.log(SafeInteger(2 ** 55));
 }
