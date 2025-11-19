@@ -1014,4 +1014,44 @@ Empty string should return 0. The string can contain spaces and letters (upper a
 
 {
   /** */
+
+  function whoseBicycle(diary1, diary2, diary3) {
+    const mark = (diary) =>
+      Object.values(diary).reduce((res, m) => res + m, 0) /
+      Object.values(diary).length;
+    const arr = [mark(diary3), mark(diary2), mark(diary1)];
+    const i = arr.indexOf(Math.max(...arr));
+
+    return i
+      ? i > 1
+        ? "I need to buy a bicycle for my first son."
+        : "I need to buy a bicycle for my second son."
+      : "I need to buy a bicycle for my third son.";
+  }
+
+  console.log(
+    whoseBicycle(
+      {
+        algebra: 16,
+        history: 7,
+        physics: 8,
+        geography: 9,
+        chemistry: 10,
+      },
+      {
+        algebra: 8,
+        history: 9,
+        physics: 8,
+        geography: 9,
+        chemistry: 8,
+      },
+      {
+        algebra: 6,
+        history: 10,
+        physics: 5,
+        geography: 9,
+        chemistry: 10,
+      }
+    )
+  );
 }
