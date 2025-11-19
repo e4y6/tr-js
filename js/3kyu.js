@@ -1158,11 +1158,13 @@ When you have finished the work, click "Run Tests" to see if your code is workin
 
 In the end, click "Submit" to submit your code pass this kata. */
 
-  function trueOrFalse(val) {
-    if (!val) {
-      return "false";
-    } else {
-      return "true";
-    }
-  }
+  const trueOrFalse = (val) => (!val ? "false" : "true");
+
+  // function trueOrFalse(val) {
+  //   if (!val) {
+  //     return "false";
+  //   } else {
+  //     return "true";
+  //   }
+  // }
 }
