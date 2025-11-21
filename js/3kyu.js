@@ -1177,12 +1177,18 @@ In the end, click "Submit" to submit your code pass this kata. */
   //     .filter((e) => e[1] >= e[0]);
   // }
 
-  function generatePairs(n) {
-    return ((v) =>
+  // function generatePairs(n) {
+  //   return ((v) =>
+  //     Array.from({ length: v ** 2 })
+  //       .map((e, i) => [Math.floor(i / v), i % v])
+  //       .filter((e) => e[1] >= e[0]))(Math.trunc(n) + 1);
+  // }
+
+  const generatePairs = (n) =>
+    ((v) =>
       Array.from({ length: v ** 2 })
         .map((e, i) => [Math.floor(i / v), i % v])
         .filter((e) => e[1] >= e[0]))(Math.trunc(n) + 1);
-  }
 
   console.log(generatePairs(2.5));
 }
