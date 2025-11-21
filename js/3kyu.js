@@ -1168,3 +1168,14 @@ In the end, click "Submit" to submit your code pass this kata. */
   //   }
   // }
 }
+
+{
+  function generatePairs(n) {
+    n = Math.trunc(n) + 1;
+    return Array.from({ length: n ** 2 })
+      .map((e, i) => [Math.floor(i / n), i % n])
+      .filter((e) => e[1] >= e[0]);
+  }
+
+  console.log(generatePairs(2.5));
+}
