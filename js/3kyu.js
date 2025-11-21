@@ -1231,10 +1231,22 @@ I've written five functions. Each function receives a parameter arr which is an 
   //       .map((e, i) => [Math.floor(i / v), i % v])
   //       .filter((e) => e[1] >= e[0]))(Math.trunc(n) + 1);
 
-  const generatePairs = (n) =>
-    Array.from({ length: (n += 1) ** 2 })
-      .map((e, i) => [Math.floor(i / n), i % n])
-      .filter((e) => e[1] >= e[0]);
+  // const generatePairs = (n) =>
+  //   Array.from({ length: (n += 1) ** 2 })
+  //     .map((e, i) => [Math.floor(i / n), i % n])
+  //     .filter((e) => e[1] >= e[0]);
+
+  const generatePairs = (n) => {
+    const pairs = [];
+
+    for (let i = 0; i <= n; i++) {
+      for (let j = i; j <= n; j++) {
+        pairs.push([i, j]);
+      }
+    }
+
+    return pairs;
+  };
 
   // console.log(generatePairs(2));
 }
