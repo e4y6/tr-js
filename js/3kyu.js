@@ -1272,8 +1272,8 @@ Note: you will be provided atleast one word and should take string as input and 
   const dropCap = (n) =>
     n.replace(
       /\b(\w)(\w{2,})/g,
-      (_, $1, $2) => $1[0].toUpperCase() + $2.toLowerCase()
+      ($, _, $1) => _.toUpperCase() + $1.toLowerCase()
     );
 
-  console.log(dropCap("more  u  than    one space between words"));
+  // console.log(dropCap("more  u  than    one space between words"));
 }
