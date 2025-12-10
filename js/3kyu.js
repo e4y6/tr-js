@@ -1173,18 +1173,6 @@ In the end, click "Submit" to submit your code pass this kata. */
   /**  
 8 kyu
 Training JS #4: Basic data types--Array
-2578092% of 3,11823,530 of 23,545myjinxin20152 Issues Reported
-
-    JavaScript
-    Node v18.x
-
-        VIM
-        EMACS
-
-Instructions
-Output
-Past Solutions
-
 In javascript, Array is one of basic data types. To define an empty array, you can use let arr=new Array() or let arr=[]
 
 Array has an attribute: length, if there is an array named arr, using arr.length to know how many elements are contained in the array.
@@ -1249,4 +1237,33 @@ I've written five functions. Each function receives a parameter arr which is an 
   };
 
   // console.log(generatePairs(2));
+}
+
+{
+  /**  
+7 kyu  Dropcaps
+DropCaps means that the first letter of the starting word of the paragraph should be in caps and the remaining lowercase, just like you see in the newspaper.
+
+But for a change, let"s do that for each and every word of the given String. Your task is to capitalize every word that has length greater than 2, leaving smaller words as they are.
+
+*should work also on Leading and Trailing Spaces and caps.
+
+"apple"            => "Apple"
+"apple of banana"  => "Apple of Banana"
+"one   space"      => "One   Space"
+"   space WALK   " => "   Space Walk   " 
+
+Note: you will be provided atleast one word and should take string as input and return string as output.   */
+
+  function dropCap(n) {
+    return n
+
+      .split(" ")
+      .map((e) =>
+        /\w{3}/.test(e) ? e[0].toUpperCase() + e.slice(1).toLowerCase() : e
+      )
+      .join(" ");
+  }
+
+  console.log(dropCap("more  u  than    one space between words"));
 }
