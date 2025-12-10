@@ -1255,15 +1255,23 @@ But for a change, let"s do that for each and every word of the given String. You
 
 Note: you will be provided atleast one word and should take string as input and return string as output.   */
 
-  function dropCap(n) {
-    return n
+  // function dropCap(n) {
+  //   return n
 
+  //     .split(" ")
+  //     .map((e) =>
+  //       /\w{3}/.test(e) ? e[0].toUpperCase() + e.slice(1).toLowerCase() : e
+  //     )
+  //     .join(" ");
+  // }
+
+  const dropCap = (n) =>
+    n
       .split(" ")
       .map((e) =>
         /\w{3}/.test(e) ? e[0].toUpperCase() + e.slice(1).toLowerCase() : e
       )
       .join(" ");
-  }
 
   console.log(dropCap("more  u  than    one space between words"));
 }
