@@ -1267,8 +1267,13 @@ Note: you will be provided atleast one word and should take string as input and 
 
   // const dropCap = (n) => n.split(" ").map((e) => /\w{3}/.test(e) ? e[0].toUpperCase() + e.slice(1).toLowerCase() : e).join(" ");
 
+  // const dropCap = (n) => n.replace(/\w{3,}/g, (e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
+
   const dropCap = (n) =>
-    n.replace(/\w{3,}/g, (e) => e[0].toUpperCase() + e.slice(1).toLowerCase());
+    n.replace(
+      /\b(\w)(\w{2,})/g,
+      (_, $1, $2) => $1[0].toUpperCase() + $2.toLowerCase()
+    );
 
   console.log(dropCap("more  u  than    one space between words"));
 }
