@@ -1294,11 +1294,16 @@ arithmetic_sequence_sum(2, 3, 5) should return 40:
 a + (a+r) + (a+r+r) + (a+r+r+r) + (a+r+r+r+r) 
 2 + (2+3) + (2+3+3) + (2+3+3+3) + (2+3+3+3+3) = 40           */
 
-  function ArithmeticSequenceSum(a, r, n) {
-    return Array(n)
+  // function ArithmeticSequenceSum(a, r, n) {
+  //   return Array(n)
+  //     .fill(a)
+  //     .reduce((sum, e, i) => sum + a + i * r, 0);
+  // }
+
+  const ArithmeticSequenceSum = (a, r, n) =>
+    Array(n)
       .fill(a)
       .reduce((sum, e, i) => sum + a + i * r, 0);
-  }
 
   console.log(ArithmeticSequenceSum(2, 2, 10));
 }
