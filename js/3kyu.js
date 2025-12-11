@@ -1272,8 +1272,33 @@ Note: you will be provided atleast one word and should take string as input and 
   const dropCap = (n) =>
     n.replace(
       /\b(\w)(\w{2,})/g,
-      ($, _, $1) => _.toUpperCase() + $1.toLowerCase()
+      (_, $, $1) => $1.toUpperCase() + $1.toLowerCase()
     );
 
   // console.log(dropCap("more  u  than    one space between words"));
+}
+
+{
+  /**  
+7 kyu
+Arithmetic sequence - sum of n elements
+In your class, you have started lessons about "arithmetic progression". Because you are also a programmer, you have decided to write a function.
+
+This function, arithmetic_sequence_sum(a, r, n), should return the sum of the first (n) elements of a sequence in which each element is the sum of the given integer (a), and a number of occurences of the given integer (r), based on the element's position within the sequence.
+
+For example:
+
+arithmetic_sequence_sum(2, 3, 5) should return 40:
+
+1     2        3          4            5
+a + (a+r) + (a+r+r) + (a+r+r+r) + (a+r+r+r+r) 
+2 + (2+3) + (2+3+3) + (2+3+3+3) + (2+3+3+3+3) = 40           */
+
+  function ArithmeticSequenceSum(a, r, n) {
+    return Array(n)
+      .fill(a)
+      .reduce((sum, e, i) => sum + a + i * r, 0);
+  }
+
+  console.log(ArithmeticSequenceSum(2, 2, 10));
 }
