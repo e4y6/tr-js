@@ -1300,10 +1300,12 @@ a + (a+r) + (a+r+r) + (a+r+r+r) + (a+r+r+r+r)
   //     .reduce((sum, e, i) => sum + a + i * r, 0);
   // }
 
+  // const ArithmeticSequenceSum = (a, r, n) => Array(n).fill(a).reduce((sum, e, i) => sum + a + i * r, 0);
+
   const ArithmeticSequenceSum = (a, r, n) =>
     Array(n)
       .fill(a)
-      .reduce((sum, e, i) => sum + a + i * r, 0);
+      .reduce((sum, e, i) => sum + e + i * r, 0);
 
-  console.log(ArithmeticSequenceSum(2, 2, 10));
+  // console.log(ArithmeticSequenceSum(2, 2, 10));
 }
