@@ -1309,3 +1309,21 @@ a + (a+r) + (a+r+r) + (a+r+r+r) + (a+r+r+r+r)
 
   // console.log(ArithmeticSequenceSum(2, 2, 10));
 }
+
+{
+  function logicalCalc(array, op) {
+    console.log(array, op);
+    switch (op) {
+      case "AND":
+        return array.every((e) => e === true);
+
+      case "OR":
+        return array.some((e) => e === true);
+
+      case "XOR":
+        return Boolean(array.reduce((sum, e) => sum + +e, 0) % 2);
+    }
+  }
+
+  console.log(logicalCalc([true, false, false, false], "XOR"));
+}
