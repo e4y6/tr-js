@@ -1369,12 +1369,19 @@ A Boolean value (True or False).
   //     : Boolean(array.reduce((sum, e) => sum + +e, 0) % 2);
   // }
 
+  // const logicalCalc = (array, op) =>
+  //   op === "AND"
+  //     ? array.every((e) => e === true)
+  //     : op === "OR"
+  //     ? array.some((e) => e === true)
+  //     : Boolean(array.reduce((sum, e) => sum + +e, 0) % 2);
+
   const logicalCalc = (array, op) =>
     op === "AND"
-      ? array.every((e) => e === true)
+      ? !array.some((e) => e !== true)
       : op === "OR"
       ? array.some((e) => e === true)
       : Boolean(array.reduce((sum, e) => sum + +e, 0) % 2);
 
-  // console.log(logicalCalc([true, true, true, false], "AND"));
+  console.log(logicalCalc([true, true, true, false], "AND"));
 }
