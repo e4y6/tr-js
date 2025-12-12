@@ -1311,19 +1311,63 @@ a + (a+r) + (a+r+r) + (a+r+r+r) + (a+r+r+r+r)
 }
 
 {
+  /**  
+8 kyu
+Logical calculator
+Your Task
+
+Given an array of Boolean values and a logical operator, return a Boolean result based on sequentially applying the operator to the values in the array.
+Examples
+
+    booleans = [True, True, False], operator = "AND"
+
+    True AND True -> True
+    True AND False -> False
+    return False
+
+    booleans = [True, True, False], operator = "OR"
+
+    True OR True -> True
+    True OR False -> True
+    return True
+
+    booleans = [True, True, False], operator = "XOR"
+
+    True XOR True -> False
+    False XOR False -> False
+    return False
+
+Input
+
+    an array of Boolean values (1 <= array_length <= 50)
+    a string specifying a logical operator: "AND", "OR", "XOR"
+
+Output
+
+A Boolean value (True or False).
+ */
+
+  // function logicalCalc(array, op) {
+  //   console.log(array, op);
+  //   switch (op) {
+  //     case "AND":
+  //       return array.every((e) => e === true);
+
+  //     case "OR":
+  //       return array.some((e) => e === true);
+
+  //     case "XOR":
+  //       return Boolean(array.reduce((sum, e) => sum + +e, 0) % 2);
+  //   }
+  // }
+
   function logicalCalc(array, op) {
-    console.log(array, op);
-    switch (op) {
-      case "AND":
-        return array.every((e) => e === true);
-
-      case "OR":
-        return array.some((e) => e === true);
-
-      case "XOR":
-        return Boolean(array.reduce((sum, e) => sum + +e, 0) % 2);
-    }
+    return op === "AND"
+      ? array.every((e) => e === true)
+      : op === "OR"
+      ? array.some((e) => e === true)
+      : Boolean(array.reduce((sum, e) => sum + +e, 0) % 2);
   }
 
-  console.log(logicalCalc([true, false, false, false], "XOR"));
+  console.log(logicalCalc([true, true, true, false], "AND"));
 }
