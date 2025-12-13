@@ -1406,3 +1406,33 @@ A Boolean value (True or False).
 
   // console.log(logicalCalc([true, true, true, false, true], "XOR"));
 }
+
+{
+  /**  XOR operator */
+  let a = 44,
+    b = 33,
+    c;
+  // console.log(a, b);
+  // console.log(a.toString(2), b.toString(2));
+
+  // c = a;
+  // a = b;
+  // b = c;
+
+  // a += b;
+  // b = a - b;
+  // a -= b;
+
+  /**  101100 */
+  /**  100001 */
+  a = a ^ b; /**    1101 */
+  b = a ^ b; /**  101100 */
+  a = a ^ b; /**  100001 */
+
+  // a ^= b;
+  // b ^= a;
+  // a ^= b;
+
+  // console.log(a.toString(2), b.toString(2));
+  // console.log(a, b);
+}
