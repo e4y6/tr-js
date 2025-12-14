@@ -1436,3 +1436,19 @@ A Boolean value (True or False).
   // console.log(a.toString(2), b.toString(2));
   // console.log(a, b);
 }
+
+{
+  function trouble(x, t) {
+    let res = [x[0]];
+
+    for (let i = 1; i < x.length; i++) {
+      console.log(res, x[i]);
+      if (t - res[res.length - 1] - x[i]) {
+        res = [...res, x[i]];
+      }
+    }
+    return res;
+  }
+
+  console.log(trouble([4, 1, 1, 1, 4], 2));
+}
