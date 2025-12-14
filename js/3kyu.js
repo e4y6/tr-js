@@ -1450,12 +1450,18 @@ A Boolean value (True or False).
   //   return res;
   // }
 
-  function trouble(x, t) {
-    return x.reduce(
+  // function trouble(x, t) {
+  //   return x.reduce(
+  //     (res, e) => (res[res.length - 1] + e !== t ? (res = [...res, e]) : res),
+  //     []
+  //   );
+  // }
+
+  const trouble = (x, t) =>
+    x.reduce(
       (res, e) => (res[res.length - 1] + e !== t ? (res = [...res, e]) : res),
       []
     );
-  }
 
   console.log(trouble([4, 1, 1, 1, 4], 2));
 }
