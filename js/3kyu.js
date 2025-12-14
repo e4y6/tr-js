@@ -1438,16 +1438,23 @@ A Boolean value (True or False).
 }
 
 {
-  function trouble(x, t) {
-    let res = [x[0]];
+  // function trouble(x, t) {
+  //   let res = [x[0]];
 
-    for (let i = 1; i < x.length; i++) {
-      console.log(res, x[i]);
-      if (t - res[res.length - 1] - x[i]) {
-        res = [...res, x[i]];
-      }
-    }
-    return res;
+  //   for (let i = 1; i < x.length; i++) {
+  //     console.log(res, x[i]);
+  //     if (t - res[res.length - 1] - x[i]) {
+  //       res = [...res, x[i]];
+  //     }
+  //   }
+  //   return res;
+  // }
+
+  function trouble(x, t) {
+    return x.reduce(
+      (res, e) => (res[res.length - 1] + e !== t ? (res = [...res, e]) : res),
+      []
+    );
   }
 
   console.log(trouble([4, 1, 1, 1, 4], 2));
