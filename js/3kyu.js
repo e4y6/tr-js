@@ -1457,11 +1457,17 @@ A Boolean value (True or False).
   //   );
   // }
 
-  const trouble = (x, t) =>
-    x.reduce(
-      (res, e) => (res[res.length - 1] + e !== t ? (res = [...res, e]) : res),
-      []
-    );
+  // const trouble = (x, t) => x.reduce((res, e) => (res[res.length - 1] + e !== t ? (res = [...res, e]) : res), []);
 
-  console.log(trouble([4, 1, 1, 1, 4], 2));
+  const trouble = (x, t) => {
+    for (let i = 0; i < x.length - 1; i++) {
+      if (x[i] + x[i + 1] === t) {
+        x.splice(i + 1, 1);
+        i--;
+      }
+    }
+    return x;
+  };
+
+  // console.log(trouble([4, 1, 1, 1, 4], 2));
 }
