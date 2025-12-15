@@ -1527,19 +1527,26 @@ Implement the riders method/function, to return how many riders are necessary to
 
 NOTE: Each rider travels as far as he can, but never more than 100 miles.  */
 
-  function riders(stations) {
-    let res = [];
-    if (stations.length) res.push(1);
+  // function riders(stations) {
+  //   let res = [];
+  //   if (stations.length) res.push(1);
 
-    for (let i = 0, sum = 0; i < stations.length; i++) {
-      sum += stations[i];
-      if (sum > 100) {
-        res.push([i]);
-        i--;
-        sum = 0;
-      }
-    }
-    return res.length;
+  //   for (let i = 0, sum = 0; i < stations.length; i++) {
+  //     sum += stations[i];
+  //     if (sum > 100) {
+  //       res.push([i]);
+  //       i--;
+  //       sum = 0;
+  //     }
+  //   }
+  //   return res.length;
+  // }
+
+  function riders(stations) {
+    return stations.reduce(
+      ([rider, s], e) => (e + s > 100 ? [(rider += 1), e] : [rider, s + e]),
+      [1, 0]
+    )[0];
   }
 
   console.log(riders([18, 15, 68]));
