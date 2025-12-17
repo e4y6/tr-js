@@ -1573,13 +1573,20 @@ NOTE: Each rider travels as far as he can, but never more than 100 miles.  */
   //   return res.length;
   // }
 
-  function riders(stations) {
-    return stations.reduce(
+  // function riders(stations) {
+  //   return stations.reduce(
+  //     ([count, dist], s) =>
+  //       dist + s > 100 ? [(count += 1), s] : [count, dist + s],
+  //     [1, 0]
+  //   )[0];
+  // }
+
+  const riders = (stations) =>
+    stations.reduce(
       ([count, dist], s) =>
-        dist + s > 100 ? [(count += 1), s] : [count, dist + s],
+        dist + s > 100 ? [count + 1, s] : [count, dist + s],
       [1, 0]
     )[0];
-  }
 
-  console.log(riders([18, 15, 68]));
+  // console.log(riders([18, 15, 68]));
 }
