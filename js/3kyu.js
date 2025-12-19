@@ -1590,3 +1590,13 @@ NOTE: Each rider travels as far as he can, but never more than 100 miles.  */
 
   // console.log(riders([18, 15, 68]));
 }
+
+{
+  const howManyYears = function (date1, date2) {
+    return ((diff) => (diff < 0 ? -1 * diff : diff))(
+      +date1.slice(0, 4) - +date2.slice(0, 4)
+    );
+  };
+
+  console.log(howManyYears("1997/10/10", "2015/10/10"));
+}
