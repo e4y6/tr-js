@@ -1610,9 +1610,11 @@ At this level, you don't need validate months and days to calculate the differen
   //   );
   // };
 
+  // const howManyYears = (date1, date2) => ((diff) => (diff < 0 ? -1 * diff : diff))(+date1.slice(0, 4) - +date2.slice(0, 4));
+
   const howManyYears = (date1, date2) =>
     ((diff) => (diff < 0 ? -1 * diff : diff))(
-      +date1.slice(0, 4) - +date2.slice(0, 4)
+      date1.match(/^\d{4}/) - date2.match(/^\d{4}/)
     );
 
   console.log(howManyYears("1997/10/10", "2015/10/10"));
