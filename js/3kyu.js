@@ -1618,8 +1618,15 @@ At this level, you don't need validate months and days to calculate the differen
 
   // const howManyYears = (date1, date2) => Math.abs((date1).split('/')[0] - (date2).split('/'));
 
-  const howManyYears = (...args) =>
-    Math.abs(args.map((e) => e.match(/^\d{4}/)).reduce((res, e) => res - e));
+  // const howManyYears = (...args) => Math.abs(args.map((e) => e.match(/^\d{4}/)).reduce((res, e) => res - e));
 
-  console.log(howManyYears("1997/10/10", "2015/10/10"));
+  const howManyYears = (...args) =>
+    Math.abs(
+      args.reduce((res, arg) => {
+        const [y] = arg.split("/");
+        return y - res;
+      }, 0)
+    );
+
+  // console.log(howManyYears("1997/10/10", "2015/10/10"));
 }
