@@ -1644,8 +1644,10 @@ At this level, you don't need validate months and days to calculate the differen
   //     }, 0)
   //   );
 
+  // const howManyYears = (...years) => Math.abs(years.reduce((res, y) => parseInt(y) - parseInt(res), 0));
+
   const howManyYears = (...years) =>
-    Math.abs(years.reduce((res, y) => parseInt(y) - parseInt(res), 0));
+    Math.abs(years.reduce((res, y) => parseInt(y) - res, 0));
 
   // console.log(howManyYears("1997/10/10", "2015/10/10"));
 }
