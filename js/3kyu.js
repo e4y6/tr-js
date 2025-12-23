@@ -1651,3 +1651,17 @@ At this level, you don't need validate months and days to calculate the differen
 
   // console.log(howManyYears("1997/10/10", "2015/10/10"));
 }
+
+{
+  /**  see row 1357 for instructions */
+
+  function logicalCalc(array, op) {
+    return op === "XOR"
+      ? Boolean(array.reduce((res, e) => res + +e, 0) % 2)
+      : op === "AND"
+      ? array.every((e) => e)
+      : array.some((e) => e);
+  }
+
+  console.log(logicalCalc([true, true, false, false, true], "OR"));
+}
