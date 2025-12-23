@@ -1628,10 +1628,18 @@ At this level, you don't need validate months and days to calculate the differen
   //     }, 0)
   //   );
 
+  // const howManyYears = (...years) =>
+  //   Math.abs(
+  //     years.reduce((res, y) => {
+  //       y = parseInt(y.split("/"));
+  //       return y - res;
+  //     }, 0)
+  //   );
+
   const howManyYears = (...years) =>
     Math.abs(
       years.reduce((res, y) => {
-        y = parseInt(y.split("/"));
+        y = parseInt(y);
         return y - res;
       }, 0)
     );
