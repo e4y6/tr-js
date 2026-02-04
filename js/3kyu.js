@@ -1707,9 +1707,12 @@ isSquare([3, 4, 7, 9]) --> false
 isSquare([]) --> undefined
  */
 
-  const isSquare = function (arr) {
-    return arr.length ? arr.every((e) => !(e ** 0.5 % 1)) : undefined;
-  };
+  // const isSquare = function (arr) {
+  //   return arr.length ? arr.every((e) => !(e ** 0.5 % 1)) : undefined;
+  // };
 
-  console.log(isSquare([1, 25, 9, 576]));
+  const isSquare = (arr) =>
+    arr.length ? arr.every((e) => !(e ** 0.5 % 1)) : undefined;
+
+  // console.log(isSquare([1, 25, 9, 576]));
 }
