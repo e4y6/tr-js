@@ -367,8 +367,8 @@ The list will never be empty and will only contain values that are greater
     (!Array.isArray(arr)
       ? "fake"
       : arr.includes(5) && arr.includes(13)
-      ? `black`
-      : `white`) +
+        ? `black`
+        : `white`) +
     " array";
 
   // console.log(blackAndWhite([5, 13]));
@@ -1408,8 +1408,8 @@ A Boolean value (True or False).
     op === "AND"
       ? array.reduce((res, e) => res && e)
       : op === "OR"
-      ? array.reduce((res, e) => res || e)
-      : array.reduce((res, e) => Boolean(res ^ e));
+        ? array.reduce((res, e) => res || e)
+        : array.reduce((res, e) => Boolean(res ^ e));
 
   // console.log(logicalCalc([true, true, true, false, true], "XOR"));
 }
@@ -1663,12 +1663,19 @@ At this level, you don't need validate months and days to calculate the differen
   //     : array.some((e) => e);
   // }
 
+  // const logicalCalc = (array, op) =>
+  //   op === "XOR"
+  //     ? Boolean(array.reduce((res, e) => res + +e, 0) % 2)
+  //     : op === "AND"
+  //     ? array.every((e) => e)
+  //     : array.some((e) => e);
+
   const logicalCalc = (array, op) =>
     op === "XOR"
-      ? Boolean(array.reduce((res, e) => res + +e, 0) % 2)
+      ? array.reduce((res, e) => res + e, 0) % 2 > 0
       : op === "AND"
-      ? array.every((e) => e)
-      : array.some((e) => e);
+        ? array.every((e) => e)
+        : array.some((e) => e);
 
   // console.log(logicalCalc([true, true, false, false, true], "OR"));
 }
