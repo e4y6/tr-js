@@ -1670,12 +1670,19 @@ At this level, you don't need validate months and days to calculate the differen
   //     ? array.every((e) => e)
   //     : array.some((e) => e);
 
+  // const logicalCalc = (array, op) =>
+  //   op === "XOR"
+  //     ? array.reduce((res, e) => res + e, 0) % 2 > 0
+  //     : op === "AND"
+  //       ? array.every((e) => e)
+  //       : array.some((e) => e);
+
   const logicalCalc = (array, op) =>
     op === "XOR"
-      ? array.reduce((res, e) => res + e, 0) % 2 > 0
+      ? array.reduce((s, e) => s + e, 0) % 2 === 1
       : op === "AND"
         ? array.every((e) => e)
         : array.some((e) => e);
 
-  // console.log(logicalCalc([true, true, false, false, true], "OR"));
+  // console.log(logicalCalc([true, true, false, false, true], "XOR"));
 }
