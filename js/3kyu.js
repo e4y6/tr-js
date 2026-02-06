@@ -1718,8 +1718,12 @@ isSquare([]) --> undefined
 }
 
 {
+  // function maxProduct(a) {
+  //   const max = Math.max(...a);
+  //   return a.splice(a.indexOf(Math.max(...a)), 1) * Math.max(...a);
+  // }
+
   function maxProduct(a) {
-    const max = Math.max(...a);
     return a.splice(a.indexOf(Math.max(...a)), 1) * Math.max(...a);
   }
 
