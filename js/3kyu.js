@@ -1727,8 +1727,12 @@ isSquare([]) --> undefined
   //   return a.splice(a.indexOf(Math.max(...a)), 1) * Math.max(...a);
   // }
 
+  // const maxProduct = (a) => a.splice(a.indexOf(Math.max(...a)), 1) * Math.max(...a);
+
   const maxProduct = (a) =>
-    a.splice(a.indexOf(Math.max(...a)), 1) * Math.max(...a);
+    ((max) => max * a.reduce((m, e) => (e !== max && e > m ? e : m), 0))(
+      Math.max(...a)
+    );
 
   console.log(maxProduct([33, 231, 454, 11, 9, 99, 57]));
 }
