@@ -1718,6 +1718,19 @@ isSquare([]) --> undefined
 }
 
 {
+  /**  
+7 kyu
+Product of Largest Pair
+Rick wants a faster way to get the product of the largest pair in an array. Your task is to create a performant solution to find the product of the largest two integers in a unique array of positive numbers.
+All inputs will be valid.
+Passing [2, 6, 3] should return 18, the product of [6, 3].
+
+Disclaimer: only accepts solutions that are faster than his, which has a running time O(nlogn).
+
+maxProduct([2, 1, 5, 0, 4, 3])              // 20
+maxProduct([7, 8, 9])                       // 72
+maxProduct([33, 231, 454, 11, 9, 99, 57])   // 104874 */
+
   // function maxProduct(a) {
   //   const max = Math.max(...a);
   //   return a.splice(a.indexOf(Math.max(...a)), 1) * Math.max(...a);
@@ -1739,5 +1752,29 @@ isSquare([]) --> undefined
       Math.max(...a)
     );
 
-  console.log(maxProduct([33, 231, 454, 11, 9, 99, 57]));
+  // console.log(maxProduct([33, 231, 454, 11, 9, 99, 57]));
+}
+
+{
+  /**  
+7 kyu
+Move all vowels
+Given a string as input, move all of its vowels to the end of the string, in the same order as they were before.
+
+Vowels are (in this kata): a, e, i, o, u
+
+Note: all provided input strings are lowercase.
+Examples
+
+"day"    ==>  "dya"
+"apple"  ==>  "pplae */
+
+  function moveVowel(input) {
+    return [...input]
+      .filter((e) => !"aeiou".includes(e))
+      .concat([...input].filter((e) => "aeiou".includes(e)))
+      .join("");
+  }
+
+  console.log(moveVowel("apple"));
 }
