@@ -1785,9 +1785,15 @@ Examples
   // const moveVowel = (input) =>
   //   input.replace(/[aeiou]/g, "") + input.replace(/[^aeiou]/g, "");
 
+  // const moveVowel = (input) =>
+  //   input.match(/[^aeiou]/g || "").join("") +
+  //   input.match(/[aeiou]/g || "").join("");
+
   const moveVowel = (input) =>
-    input.match(/[^aeiou]/g || "").join("") +
-    input.match(/[aeiou]/g || "").join("");
+    [
+      ...(input.match(/[^aeiou]/g) || []),
+      ...(input.match(/[aeiou]/g) || []),
+    ].join("");
 
   console.log(moveVowel("apple"));
 }
