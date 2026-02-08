@@ -1769,12 +1769,18 @@ Examples
 "day"    ==>  "dya"
 "apple"  ==>  "pplae */
 
-  function moveVowel(input) {
-    return [...input]
+  // function moveVowel(input) {
+  //   return [...input]
+  //     .filter((e) => !"aeiou".includes(e))
+  //     .concat([...input].filter((e) => "aeiou".includes(e)))
+  //     .join("");
+  // }
+
+  const moveVowel = (input) =>
+    [...input]
       .filter((e) => !"aeiou".includes(e))
       .concat([...input].filter((e) => "aeiou".includes(e)))
       .join("");
-  }
 
   console.log(moveVowel("apple"));
 }
