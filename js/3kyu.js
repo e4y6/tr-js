@@ -1776,11 +1776,14 @@ Examples
   //     .join("");
   // }
 
+  // const moveVowel = (input) =>
+  //   [...input]
+  //     .filter((e) => !"aeiou".includes(e))
+  //     .concat([...input].filter((e) => "aeiou".includes(e)))
+  //     .join("");
+
   const moveVowel = (input) =>
-    [...input]
-      .filter((e) => !"aeiou".includes(e))
-      .concat([...input].filter((e) => "aeiou".includes(e)))
-      .join("");
+    input.replace(/[aeiou]/g, "") + input.replace(/[^aeiou]/g, "");
 
   console.log(moveVowel("apple"));
 }
