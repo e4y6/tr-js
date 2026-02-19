@@ -1834,16 +1834,21 @@ Given 2 string parameters, show a concatenation of:
   //     .map((e) => (e === e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
   //     .join("");
 
+  // const reverseAndMirror = (s1, s2) =>
+  //   [
+  //     [...s2]
+  //       .reverse()
+  //       .map((e) => (e === e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
+  //       .join(""),
+  //     [...[...s1].reverse(), ...s1]
+  //       .map((e) => (e === e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
+  //       .join(""),
+  //   ].join("@@@");
+
   const reverseAndMirror = (s1, s2) =>
-    [
-      [...s2]
-        .reverse()
-        .map((e) => (e === e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
-        .join(""),
-      [...[...s1].reverse(), ...s1]
-        .map((e) => (e === e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
-        .join(""),
-    ].join("@@@");
+    [...[...s2].reverse(), "@@@", ...[...s1].reverse(), ...s1]
+      .map((e) => (e === e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
+      .join("");
 
   console.log(reverseAndMirror("FizZ", "buZZ"));
 }
