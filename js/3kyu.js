@@ -1886,10 +1886,13 @@ Given 123456789 the function should return 1:
   //     ? n
   //     : ((n) => singleDigit(n))([...n.toString(2)].reduce((s, e) => s + +e, 0));
 
-  const singleDigit = (n) =>
-    n < 9
-      ? n
-      : ((n) => singleDigit(n))(n.toString(2).replaceAll("0", "").length);
+  // const singleDigit = (n) =>
+  //   n < 9
+  //     ? n
+  //     : ((n) => singleDigit(n))(n.toString(2).replaceAll("0", "").length);
 
-  console.log(singleDigit(123456789));
+  const singleDigit = (n) =>
+    n < 9 ? n : singleDigit(n.toString(2).replaceAll("0", "").length);
+
+  // console.log(singleDigit(123456789));
 }
