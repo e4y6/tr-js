@@ -1875,11 +1875,16 @@ Given 123456789 the function should return 1:
 16 --> (binary) 10000
 10000 --> (sum of binary digits) 1 */
 
-  function singleDigit(n) {
-    return n < 9
+  // function singleDigit(n) {
+  //   return n < 9
+  //     ? n
+  //     : ((n) => singleDigit(n))([...n.toString(2)].reduce((s, e) => s + +e, 0));
+  // }
+
+  const singleDigit = (n) =>
+    n < 9
       ? n
       : ((n) => singleDigit(n))([...n.toString(2)].reduce((s, e) => s + +e, 0));
-  }
 
   console.log(singleDigit(123456789));
 }
