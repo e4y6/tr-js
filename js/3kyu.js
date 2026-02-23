@@ -1912,9 +1912,11 @@ Tips:
   const end2 = new Date(2013, 1, 1, 0, 0, 20);
   const end3 = new Date(2013, 1, 1, 0, 1, 20);
 
-  function elapsedSeconds(startDate, endDate) {
-    return (endDate - startDate) / 1000;
-  }
+  // function elapsedSeconds(startDate, endDate) {
+  //   return (endDate - startDate) / 1000;
+  // }
+
+  const elapsedSeconds = (startDate, endDate) => (endDate - startDate) / 1000;
 
   console.log(elapsedSeconds(start, end2));
 }
