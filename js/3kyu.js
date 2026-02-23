@@ -1916,7 +1916,9 @@ Tips:
   //   return (endDate - startDate) / 1000;
   // }
 
-  const elapsedSeconds = (startDate, endDate) => (endDate - startDate) / 1000;
+  // const elapsedSeconds = (startDate, endDate) => (endDate - startDate) / 1000;
+
+  const elapsedSeconds = (startDate, endDate) => (endDate - startDate) / 1e3;
 
   console.log(elapsedSeconds(start, end2));
 }
