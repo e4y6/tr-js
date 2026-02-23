@@ -1920,5 +1920,32 @@ Tips:
 
   const elapsedSeconds = (startDate, endDate) => (endDate - startDate) / 1e3;
 
-  console.log(elapsedSeconds(start, end2));
+  // console.log(elapsedSeconds(start, end2));
+}
+
+{
+  /**  
+7 kyu
+RaNDoM CAsE
+Write a function that will randomly upper and lower characters in a string - randomCase() (random_case() for Python).
+
+A few examples:
+
+randomCase("Lorem ipsum dolor sit amet, consectetur adipiscing elit") == "lOReM ipSum DOloR SiT AmeT, cOnsEcTEtuR aDiPiSciNG eLIt"
+
+randomCase("Donec eleifend cursus lobortis") == "DONeC ElEifEnD CuRsuS LoBoRTIs"
+
+Notes:
+
+    This function will work within the basic ASCII character set to make this kata easier - so no need to make the function multibyte safe.
+
+    The letters MUST be selected randomly - filters are set to make sure there is no cheating! */
+
+  function randomCase(x) {
+    return [...x]
+      .map((e) => (Math.random(1) > 0.5 ? e.toUpperCase() : e.toLowerCase()))
+      .join("");
+  }
+
+  console.log(randomCase("Donec eleifend cursus lobortis"));
 }
