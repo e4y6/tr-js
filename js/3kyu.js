@@ -1941,11 +1941,21 @@ Notes:
 
     The letters MUST be selected randomly - filters are set to make sure there is no cheating! */
 
-  function randomCase(x) {
-    return [...x]
-      .map((e) => (Math.random(1) > 0.5 ? e.toUpperCase() : e.toLowerCase()))
-      .join("");
-  }
+  // function randomCase(x) {
+  //   return [...x]
+  //     .map((e) => (Math.random(1) > 0.5 ? e.toUpperCase() : e.toLowerCase()))
+  //     .join("");
+  // }
 
-  console.log(randomCase("Donec eleifend cursus lobortis"));
+  // const randomCase = (x) =>
+  //   [...x]
+  //     .map((e) => (Math.random(1) > 0.5 ? e.toUpperCase() : e.toLowerCase()))
+  //     .join("");
+
+  const randomCase = (x) =>
+    x.replace(/\w/g, (e) =>
+      e[`to${Math.random() > 0.5 ? "Upp" : "Low"}erCase`]()
+    );
+
+  // console.log(randomCase("Donec eleifend cursus lobortis"));
 }
